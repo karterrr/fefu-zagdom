@@ -3,6 +3,8 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Twig\Loader\FilesystemLoader;
+
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -23,6 +25,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $loader = new \Twig\Loader\FilesystemLoader();
+        $loader->addPath(base_path() . '/resources/components', 'components');
+        $loader->addPath(base_path() . '/resources/layouts', 'layouts');
+        \Twig::getLoader()->addLoader($loader);
     }
 }
