@@ -3,25 +3,59 @@
 $primary: red;
 $secondary: blue;
 
-body{
-    font-family:'Open Sans', sans-serif;
+.Layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.Layout__main {
+  padding: 2vh;
+  flex: 1;
+  background-color: rgb(190, 210, 233);
 }
 
-.hello{
-   color: $primary;
-   font-family:'Open Sans', sans-serif;
+.Layout__header
+{
+  font-family: "Montserrat", sans-serif;
+  padding:2vh;
+  background-color: rgb(69, 104, 133);
+}
+
+.Layout__footer
+{
+  font-family: "Montserrat", sans-serif;
+  padding:2vh;
+  background-color: rgb(69, 104, 133);
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.hello {
+  color: rgb(43, 55, 61);
+  font-family: "Montserrat", sans-serif;
+
+}
+
+::-moz-placeholder {
+  color: gray;
+}
+
+:-ms-input-placeholder {
+  color: gray;
 }
 
 ::placeholder {
-    color: gray;
+  color: gray;
 }
 
-p{
-   font-size:20px;
-   color:red;
-   font-family: 'Open Sans', sans-serif;
+p {
+  font-size: 20px;
+  color: red;
+  font-family: "Open Sans", sans-serif;
 }
 
 .lorem {
-    color: $secondary;
+  color: rgb(43, 55, 61);
 }
