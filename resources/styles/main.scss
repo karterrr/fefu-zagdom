@@ -1,0 +1,61 @@
+@import "../layouts/base.scss";
+
+$primary: red;
+$secondary: blue;
+
+.Layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.Layout__main {
+  padding: 2vh;
+  flex: 1;
+  background-color: rgb(190, 210, 233);
+}
+
+.Layout__header
+{
+  font-family: "Montserrat", sans-serif;
+  padding:2vh;
+  background-color: rgb(69, 104, 133);
+}
+
+.Layout__footer
+{
+  font-family: "Montserrat", sans-serif;
+  padding:2vh;
+  background-color: rgb(69, 104, 133);
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.hello {
+  color: rgb(43, 55, 61);
+  font-family: "Montserrat", sans-serif;
+
+}
+
+::-moz-placeholder {
+  color: gray;
+}
+
+:-ms-input-placeholder {
+  color: gray;
+}
+
+::placeholder {
+  color: gray;
+}
+
+p {
+  font-size: 20px;
+  color: red;
+  font-family: "Open Sans", sans-serif;
+}
+
+.lorem {
+  color: rgb(43, 55, 61);
+}
