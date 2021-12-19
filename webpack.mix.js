@@ -25,6 +25,7 @@ mix
             'resources/components/footer/**/*',
             'resources/components/header/**/*',
             'resources/components/**/*',
+            'resources/components/**/**/*',
             'resources/lang/**/*',
             'resources/layouts/**/*',
             'public/**/*',
