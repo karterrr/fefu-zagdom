@@ -56,8 +56,6 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-    line-height: 1.2;
-
     @include vw-sm-down {
         width: 344px;
     }

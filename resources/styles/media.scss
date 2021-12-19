@@ -1,16 +1,30 @@
 @import 'settings';
 
+$breakpoint-xxs: $breakpoint-xxsmall;
 $breakpoint-xs: $breakpoint-xsmall;
 $breakpoint-sm: $breakpoint-small;
 $breakpoint-md: $breakpoint-medium;
 $breakpoint-lg: $breakpoint-large;
 $breakpoint-xl: $breakpoint-xlarge;
+$breakpoint-mde: $breakpoint-large-extra;
 
 @function vw-down($bp) {
     @return '(max-width: #{$bp - 1})';
 }
 @function vw-up($bp) {
     @return '(min-width: #{$bp})';
+}
+
+$bp-xxs: $breakpoint-xxs;
+@mixin vw-xxs-up {
+    @media #{vw-up($bp-xxs)} {
+        @content;
+    }
+}
+@mixin vw-xxs-down {
+    @media #{vw-down($bp-xxs)} {
+        @content;
+    }
 }
 
 $bp-xs: $breakpoint-xs;
@@ -33,6 +47,31 @@ $bp-sm: $breakpoint-sm;
 }
 @mixin vw-sm-down {
     @media #{vw-down($bp-sm)} {
+        @content;
+    }
+}
+
+$bp-mde:$breakpoint-mde;
+@mixin vw-mde-up {
+    @media #{vw-up($bp-mde)} {
+        @content;
+    }
+}
+@mixin vw-mde-down {
+    @media #{vw-down($bp-mde)} {
+        @content;
+    }
+}
+
+
+$bp-md: $breakpoint-md;
+@mixin vw-md-up {
+    @media #{vw-up($bp-md)} {
+        @content;
+    }
+}
+@mixin vw-md-down {
+    @media #{vw-down($bp-md)} {
         @content;
     }
 }
