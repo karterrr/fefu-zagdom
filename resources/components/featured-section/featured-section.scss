@@ -8,7 +8,7 @@
 
     &__description {
         @include vw-md-up {
-            max-width: 624px;
+            min-width: 624px;
             margin-right: 16px;
         }
 
@@ -58,7 +58,7 @@
         margin-bottom: 26px;
     }
 
-    &title {
+    &__title {
         margin-bottom: 8px;
         font-weight: $font-weight-medium;
         font-size: toRem(24px);

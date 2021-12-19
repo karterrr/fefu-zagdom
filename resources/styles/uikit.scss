@@ -32,9 +32,18 @@ $button-primary-color: white;
 $button-primary-active-background: darken($button-primary-background, 10%);
 $button-primary-active-color: white;
 
+$button-secondary-background: white;
+$button-secondary-color: $color-green;
+$button-secondary-hover-background: white;
+$button-secondary-hover-color: darken($button-secondary-color, 5%);
+$button-secondary-active-background: white;
+$button-secondary-active-color: darken($button-secondary-color, 10%);
+
 $offcanvas-bar-background: hsl(153, 98%, 32%);
 
 $global-inverse-color: white;
+
+$inverse-global-color: $global-inverse-color;
 
 $global-font-family: 'Open Sans', sans-serif;
 $base-heading-font-family: 'Montserrat', sans-serif;
@@ -52,13 +61,15 @@ $base-heading-font-family: 'Montserrat', sans-serif;
     padding-x: 40px;
     border-radius: 10px;
     font-family: $base-heading-font-family;
-    //font-weight: $font-weight-medium;
+    font-weight: $font-weight-medium;
     font-size: toRem(14px);
     line-height: 49px;
     transition: background-color 0.25s ease-in-out;
 }
 
-@mixin hook-card() { color: #000; }
+@mixin hook-button-secondary {
+    border: 1px solid;
+}
 
 // 4. Import UIkit.
 @import "~uikit/src/scss/uikit.scss";
