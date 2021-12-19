@@ -31,7 +31,7 @@
     <a class="PrimaryPhone" href="tel:{{ value }}">
         <img
             class="PrimaryPhone__icon"
-            src="{{ 'icons/phone.svg'|asset }}"
+            src="{{ 'icons/phone-green.svg'|asset }}"
             alt="Телефон"
             width="16"
             height="16"
@@ -41,7 +41,7 @@
 {% endmacro %}
 
 {% macro button() %}
-    <button type="button" class="Button Button--primary">
+    <button type="button" class="Button Button--primary" data-uk-toggle="#feedback">
         Оставить заявку
     </button>
 {% endmacro %}
@@ -50,7 +50,7 @@
     <button
         type="button"
         class="Button Button--primary Button--icon"
-        uk-toggle="target: #offcanvas"
+        data-uk-toggle="target: #offcanvas"
         id="offcanvas-button"
     >
         <img
@@ -63,7 +63,7 @@
 {% endmacro %}
 
 {% macro offcanvas(scope) %}
-    <div id="offcanvas" class="Offcanvas" uk-offcanvas="overlay: true; flip: true">
+    <div id="offcanvas" class="Offcanvas" data-uk-offcanvas="overlay: true; flip: true">
         <div class="uk-offcanvas-bar Offcanvas__layout">
             <button class="uk-offcanvas-close Offcanvas__close" type="button">
                 <img
